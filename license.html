@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Лицензирование</title>
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <meta name="description" content="Лицензирование iDLook: бесплатный режим на 4 подключения и получение полной лицензии.">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div class="topbar">
+ <button class="burger" type="button" onclick="document.querySelector('.sidebar').classList.toggle('show')">☰</button>
+ <b>iDLook</b>&nbsp;<span style="color:#91A9F0">release 1.5</span>
+</div>
+<div class="layout">
+ <aside class="sidebar">
+  <div class="brand"><small class="slogan">One ID. One Look. Full Control</small><div class="row"><div class="logo">iD</div><b>iDLook</b></div></div>
+  <ul class="nav"><li><a href="index.html">Главная</a></li><li><a href="about.html">О программе</a></li><li><a href="requirements.html">Системные требования</a></li><li><a href="license.html" class="active">Лицензирование</a></li><li><a href="network.html">Настройка камер и сети</a></li><li><a href="install.html">Установка и запуск ПО</a></li><li class="nav-group"><button class="nav-head" type="button"><span>Программа iDLook</span><span class="chev">▾</span></button><ul class="sub"><li><a href="idlook.html">Обзор</a></li><li><a href="idlook-mainmenu.html">Главное меню</a></li><li><a href="idlook-contextmenu.html">Всплывающее меню</a></li><li><a href="idlook-archive.html">Архив и фрагменты</a></li><li><a href="idlook-info.html">Информация</a></li><li><a href="idlook-screen.html">Вид экрана</a></li><li><a href="idlook-cameras.html">Камеры</a></li><li><a href="idlook-settings.html">Настройки</a></li><li><a href="idlook-clients.html">Клиенты</a></li><li><a href="idlook-analytics.html">Видеоаналитика</a></li><li><a href="idlook-events.html">События</a></li><li><a href="idlook-ptz.html">Управление PTZ</a></li></ul></li><li class="nav-group"><button class="nav-head" type="button"><span>iDLook Client</span><span class="chev">▾</span></button><ul class="sub"><li><a href="client.html">Обзор</a></li><li><a href="client-mainmenu.html">Главное меню</a></li><li><a href="client-contextmenu.html">Всплывающее меню</a></li><li><a href="client-archive.html">Архив и фрагменты</a></li><li><a href="client-info.html">Информация</a></li><li><a href="client-screen.html">Вид экрана</a></li><li><a href="client-settings.html">Настройки</a></li><li><a href="client-events.html">События</a></li><li><a href="client-ptz.html">Управление PTZ</a></li></ul></li></ul>
+ </aside>
+ <main class="content">
+ <h1>Лицензирование</h1><h3>Лицензирование и состав ПО</h3><div class="panel"><p>Система видеонаблюдения «iDLook» относится к разряду <b>условно-бесплатного</b> (shareware) ПО и поддерживает работу в среде ОС MS Windows 7, 10, 11, Server. В настоящий момент, ведутся работы по поддержке функционирования системы в составе ряда ОС Linux, таких как: ASTRA Linux, ALT Linux и Ubuntu.</p><p>Текущая версия ПО (1.5), при использовании без лицензии, полностью функциональна для 4-х подключений к IP-устройствам: к двум ONVIF камерам и двум источникам RTSP потоков. При этом доступны, без ограничений:</p><ul><li>весь базовый функционал работы с камерами и архивами;</li><li>подключение удаленных клиентов;</li><li>поддержка PTZ ONVIF камер;</li><li>цифровой и оптический (PTZ) Zoom;</li><li>встроенный настраиваемый детектор движения;</li><li>сервис отправки выбранных системных событий, на электронную почту (Email) и/или в мессенджер (Max) и/или в мессенджер (Telegram), для клиентов системы видеонаблюдения «iDLook».</li></ul></div><div class="panel"><p>Для расширения возможностей ПО - увеличения количества удаленных клиентов, увеличения количества подключаемых камер и потоков, а также для поддержки сервисов видеоаналитики и возможности подключения к ЕЦХД, требуется <b>лицензия</b>. По всем вопросам, связанных с получением лицензии, можно обратится письмом на email компании, в котором необходимо указать:</p><ul><li>наименование организации или ФИО физлица, контакты;</li><li>объект установки ПО (офис, склад, дом и т.п.);</li><li>желаемые параметры подключений – количество ONVIF камер и RTSP подключений;</li><li>список требуемых сервисов видеоаналитики;</li><li>количество требуемых подключений удаленных клиентов;</li><li>необходимость поддержки подключения к ЕЦХД.</li></ul></div>
+ <div class="footer" id="site-footer"></div><script src="assets/footer.js"></script>
+ </main>
+</div>
+<script>
+document.querySelectorAll('.nav-head').forEach(function(h){
+  h.addEventListener('click',function(){ h.parentElement.classList.toggle('open'); });
+});
+document.addEventListener('click',function(e){
+  if(window.innerWidth<=900 && !e.target.closest('.sidebar') && !e.target.closest('.burger'))
+    document.querySelector('.sidebar').classList.remove('show');
+});
+</script>
+</body>
+</html>

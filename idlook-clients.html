@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Форма «Клиенты»</title>
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <meta name="description" content="Форма «Клиенты» iDLook: управление удалёнными клиентами системы.">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div class="topbar">
+ <button class="burger" type="button" onclick="document.querySelector('.sidebar').classList.toggle('show')">☰</button>
+ <b>iDLook</b>&nbsp;<span style="color:#91A9F0">release 1.5</span>
+</div>
+<div class="layout">
+ <aside class="sidebar">
+  <div class="brand"><small class="slogan">One ID. One Look. Full Control</small><div class="row"><div class="logo">iD</div><b>iDLook</b></div></div>
+  <ul class="nav"><li><a href="index.html">Главная</a></li><li><a href="about.html">О программе</a></li><li><a href="requirements.html">Системные требования</a></li><li><a href="license.html">Лицензирование</a></li><li><a href="network.html">Настройка камер и сети</a></li><li><a href="install.html">Установка и запуск ПО</a></li><li class="nav-group open"><button class="nav-head" type="button"><span>Программа iDLook</span><span class="chev">▾</span></button><ul class="sub"><li><a href="idlook.html">Обзор</a></li><li><a href="idlook-mainmenu.html">Главное меню</a></li><li><a href="idlook-contextmenu.html">Всплывающее меню</a></li><li><a href="idlook-archive.html">Архив и фрагменты</a></li><li><a href="idlook-info.html">Информация</a></li><li><a href="idlook-screen.html">Вид экрана</a></li><li><a href="idlook-cameras.html">Камеры</a></li><li><a href="idlook-settings.html">Настройки</a></li><li><a href="idlook-clients.html" class="active">Клиенты</a></li><li><a href="idlook-analytics.html">Видеоаналитика</a></li><li><a href="idlook-events.html">События</a></li><li><a href="idlook-ptz.html">Управление PTZ</a></li></ul></li><li class="nav-group"><button class="nav-head" type="button"><span>iDLook Client</span><span class="chev">▾</span></button><ul class="sub"><li><a href="client.html">Обзор</a></li><li><a href="client-mainmenu.html">Главное меню</a></li><li><a href="client-contextmenu.html">Всплывающее меню</a></li><li><a href="client-archive.html">Архив и фрагменты</a></li><li><a href="client-info.html">Информация</a></li><li><a href="client-screen.html">Вид экрана</a></li><li><a href="client-settings.html">Настройки</a></li><li><a href="client-events.html">События</a></li><li><a href="client-ptz.html">Управление PTZ</a></li></ul></li></ul>
+ </aside>
+ <main class="content">
+ <h1>Форма «Клиенты»</h1><h3>Форма «Клиенты»</h3><div class="panel"><p>Эта форма предназначена ведения базы данных удаленных клиентов: их создание, изменение и удаление, присвоение логина, пароля, адресов Email (до 2-х), идентификаторов мессенджеров Telegram и/или Max, выбор камер и разрешений для каждого из клиентов удаленного доступа, к ресурсам системы видеонаблюдения iDLook.</p></div><figure class="shot"><img src="assets/img_20.jpg" alt="Скриншот"></figure><div class="panel"><p>Кнопка «Добавить клиента» используется<b> </b>для добавления нового клиента - после нажатии на нее, необходимо задать логин, пароль, не менее одного адреса Email, выбрать требуемые камеры и разрешения для доступа к ресурсам системы. <b>Это</b><b> является обязательным условием</b><b> для сохранения клиента</b><b> базе данных клиентов</b>.</p><p>Заданные, при добавления нового клиента, камеры и разрешения, будут использованы при подключении удаленного клиента к системе, помощью в программы «iDLook Client».</p><p>Дополнительный Email и идентификаторы мессенджеров Telegram и/или Max, задаются пользователем в соответствующих полях ввода, с использованием символа-разделителя пробел.</p><p>Для получения идентификаторов Max или Telegram:</p><ul><li>На смартфоне, планшете или ПК, в запущенных приложениях Max или Telegram, найдите бота системы iDLook, в поиске, по имени: <b>IDLookBot</b> и перейдите по ссылке на него.</li><li>В окне сообщения, напишите ему /start , в ответ на что, он выдаст ID формата max:123456789 или tg:123456789;</li><li>Сохраните этот ID (вместе с припиской tg: или max:) – в дальнейшем, их можно будет вставить, в соответствующее поле для выбранного клиента, на форме «Клиенты»;</li><li>При совместном использовании двух мессенджеров, используйте символ-разделитель пробел, например, <b>max</b><b>:123456789 tg:123456789</b></li></ul><p>После введения всех данных о клиенте, необходимо нажать кнопку «Сохранить и выйти», для сохранения информации в базе данных и выхода из режима добавления клиента.</p><p>После успешного добавления клиента, к нему на Email, автоматически поступит письмо, содержащее GUID файл для подключения, который необходимо скопировать в корневую папку клиентской программы «iDLook Client», установленной на удаленном компьютере.</p><p>Аналогичным образом, действует режим редактирования уже существующего клиента, который устанавливается после выбора клиента в списке клиентов и нажатия на кнопку «Изменить клиента».</p><p>Для удаления клиента используется кнопка «Удалить клиента».</p><p>На панели «Активные клиенты», отображаются все клиенты, подключенные к системе в текущий момент времени. При нажатии правой клавишей мыши в списке подключенных активных клиентов, откроется панель с краткой информацией о клиенте.</p></div><figure class="shot"><img src="assets/img_21.jpg" alt="Скриншот"></figure>
+ <div class="footer" id="site-footer"></div><script src="assets/footer.js"></script>
+ </main>
+</div>
+<script>
+document.querySelectorAll('.nav-head').forEach(function(h){
+  h.addEventListener('click',function(){ h.parentElement.classList.toggle('open'); });
+});
+document.addEventListener('click',function(e){
+  if(window.innerWidth<=900 && !e.target.closest('.sidebar') && !e.target.closest('.burger'))
+    document.querySelector('.sidebar').classList.remove('show');
+});
+</script>
+</body>
+</html>

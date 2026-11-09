@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Архив и фрагменты — iDLook Client</title>
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <meta name="description" content="Работа с архивом и фрагментами в iDLook Client: просмотр и экспорт записей.">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div class="topbar">
+ <button class="burger" type="button" onclick="document.querySelector('.sidebar').classList.toggle('show')">☰</button>
+ <b>iDLook</b>&nbsp;<span style="color:#91A9F0">release 1.5</span>
+</div>
+<div class="layout">
+ <aside class="sidebar">
+  <div class="brand"><small class="slogan">One ID. One Look. Full Control</small><div class="row"><div class="logo">iD</div><b>iDLook</b></div></div>
+  <ul class="nav"><li><a href="index.html">Главная</a></li><li><a href="about.html">О программе</a></li><li><a href="requirements.html">Системные требования</a></li><li><a href="license.html">Лицензирование</a></li><li><a href="network.html">Настройка камер и сети</a></li><li><a href="install.html">Установка и запуск ПО</a></li><li class="nav-group"><button class="nav-head" type="button"><span>Программа iDLook</span><span class="chev">▾</span></button><ul class="sub"><li><a href="idlook.html">Обзор</a></li><li><a href="idlook-mainmenu.html">Главное меню</a></li><li><a href="idlook-contextmenu.html">Всплывающее меню</a></li><li><a href="idlook-archive.html">Архив и фрагменты</a></li><li><a href="idlook-info.html">Информация</a></li><li><a href="idlook-screen.html">Вид экрана</a></li><li><a href="idlook-cameras.html">Камеры</a></li><li><a href="idlook-settings.html">Настройки</a></li><li><a href="idlook-clients.html">Клиенты</a></li><li><a href="idlook-analytics.html">Видеоаналитика</a></li><li><a href="idlook-events.html">События</a></li><li><a href="idlook-ptz.html">Управление PTZ</a></li></ul></li><li class="nav-group open"><button class="nav-head" type="button"><span>iDLook Client</span><span class="chev">▾</span></button><ul class="sub"><li><a href="client.html">Обзор</a></li><li><a href="client-mainmenu.html">Главное меню</a></li><li><a href="client-contextmenu.html">Всплывающее меню</a></li><li><a href="client-archive.html" class="active">Архив и фрагменты</a></li><li><a href="client-info.html">Информация</a></li><li><a href="client-screen.html">Вид экрана</a></li><li><a href="client-settings.html">Настройки</a></li><li><a href="client-events.html">События</a></li><li><a href="client-ptz.html">Управление PTZ</a></li></ul></li></ul>
+ </aside>
+ <main class="content">
+ <h1>Архив и фрагменты</h1><h3>Архив и фрагменты</h3><div class="panel"><p>Форма для работы с удаленным архивом камеры вызывается из контекстного меню, для выбранной камеры. Одновременно можно работать с несколькими архивами камер.</p></div><figure class="shot"><img src="assets/img_31.jpg" alt="Скриншот"></figure><div class="panel"><p>На этой форме можно выбрать:</p><ul><li>требуемый поток записей, из выпадающего списка «Поток»;</li><li>требуемую дату и диапазон времени (От-До), архивных записей.</li></ul><p>На календаре формы выделяются (зеленым цветом) дни, содержащие архивные записи, для выбранного потока.</p><p>Найденные записи могут быть сохранены в видео файл на диск (кнопка «Сохранить в файл») или в избранные видео фрагменты (кнопка «Сохранить во фрагменты»). Формат сохраняемых файлов - .mp4.</p><p>Для камер, производящих запись в архив со звуком, все сохраняемые видео файлы, также будут содержать звуковую дорожку.</p><p>Поток найденных записей может быть просмотрен в <b>потоковом </b><b>архивном плеере</b>, вызываемый по нажатию на кнопку «Просмотр».</p></div><figure class="shot"><img src="assets/img_32.jpg" alt="Скриншот"></figure><div class="panel"><p>Потоковый архивный плеер предназначен только для просмотра потока выбранных архивных записей. На форме отображаются:</p><p>кнопки управления проигрыванием: Play (Играть), Pause (Пауза), Stop (Стоп), Loop (Цикл);</p><p>активный, управляемый мышью слайдер;</p><p>графическая панель, с отображением распределения файлов в архиве в заданном временном интервале.</p><p>Сохраненные видео фрагменты, отображаются в виде списка на <b>форме фрагментов</b>, вызываемой из контекстного меню, для выбранной камеры</p></div><figure class="shot"><img src="assets/img_33.jpg" alt="Скриншот"></figure><div class="panel"><p>Выбранный в списке фрагмент, может просмотрен (кнопка «Просмотр») во встроенном видеоплеере или удален (кнопка «Удалить»).</p></div><figure class="shot"><img src="assets/img_34.jpg" alt="Скриншот"></figure><div class="panel"><p>Видеоплеер содержит: активный слайдер, c отображением временных меток и кнопки управления проигрыванием: Play (Играть), Pause (Пауза), Stop (Стоп), Forward (Вперед), Backward (Назад), Номе (В начало), Loop (Цикл).</p></div>
+ <div class="footer" id="site-footer"></div><script src="assets/footer.js"></script>
+ </main>
+</div>
+<script>
+document.querySelectorAll('.nav-head').forEach(function(h){
+  h.addEventListener('click',function(){ h.parentElement.classList.toggle('open'); });
+});
+document.addEventListener('click',function(e){
+  if(window.innerWidth<=900 && !e.target.closest('.sidebar') && !e.target.closest('.burger'))
+    document.querySelector('.sidebar').classList.remove('show');
+});
+</script>
+</body>
+</html>

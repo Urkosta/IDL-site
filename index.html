@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>iDLook — система видеонаблюдения</title>
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <meta name="description" content="iDLook — программное обеспечение для организации профессионального видеонаблюдения на гражданских и промышленных объектах.">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div class="topbar">
+ <button class="burger" type="button" onclick="document.querySelector('.sidebar').classList.toggle('show')">☰</button>
+ <b>iDLook</b>&nbsp;<span style="color:#91A9F0">release 1.5</span>
+</div>
+<div class="layout">
+ <aside class="sidebar">
+  <div class="brand"><small class="slogan">One ID. One Look. Full Control</small><div class="row"><div class="logo">iD</div><b>iDLook</b></div></div>
+  <ul class="nav"><li><a href="index.html" class="active">Главная</a></li><li><a href="about.html">О программе</a></li><li><a href="requirements.html">Системные требования</a></li><li><a href="license.html">Лицензирование</a></li><li><a href="network.html">Настройка камер и сети</a></li><li><a href="install.html">Установка и запуск ПО</a></li><li class="nav-group"><button class="nav-head" type="button"><span>Программа iDLook</span><span class="chev">▾</span></button><ul class="sub"><li><a href="idlook.html">Обзор</a></li><li><a href="idlook-mainmenu.html">Главное меню</a></li><li><a href="idlook-contextmenu.html">Всплывающее меню</a></li><li><a href="idlook-archive.html">Архив и фрагменты</a></li><li><a href="idlook-info.html">Информация</a></li><li><a href="idlook-screen.html">Вид экрана</a></li><li><a href="idlook-cameras.html">Камеры</a></li><li><a href="idlook-settings.html">Настройки</a></li><li><a href="idlook-clients.html">Клиенты</a></li><li><a href="idlook-analytics.html">Видеоаналитика</a></li><li><a href="idlook-events.html">События</a></li><li><a href="idlook-ptz.html">Управление PTZ</a></li></ul></li><li class="nav-group"><button class="nav-head" type="button"><span>iDLook Client</span><span class="chev">▾</span></button><ul class="sub"><li><a href="client.html">Обзор</a></li><li><a href="client-mainmenu.html">Главное меню</a></li><li><a href="client-contextmenu.html">Всплывающее меню</a></li><li><a href="client-archive.html">Архив и фрагменты</a></li><li><a href="client-info.html">Информация</a></li><li><a href="client-screen.html">Вид экрана</a></li><li><a href="client-settings.html">Настройки</a></li><li><a href="client-events.html">События</a></li><li><a href="client-ptz.html">Управление PTZ</a></li></ul></li></ul>
+ </aside>
+ <main class="content">
+ <div class="panel hero">
+<h1>iDLook — система видеонаблюдения</h1>
+<div class="sub-line">One ID. One Look. Full Control</div>
+<p>Программное обеспечение для организации профессионального видеонаблюдения на гражданских и промышленных объектах: до 250 камер и 250 удалённых клиентов, встроенный детектор движения, сервер видеоаналитики, уведомления в Email, Telegram и Max.</p>
+<div style="display:flex;flex-wrap:wrap;align-items:center"><a class="btn btn-ghost" href="install.html">Установка и запуск</a><a class="btn btn-ghost" href="idlook.html">Документация iDLook</a><a class="btn btn-accent" style="margin-left:auto" href="https://disk.yandex.ru/d/m3CH6cEopT6IBw" download>Скачать программу</a></div>
+</div>
+<h3>Разделы документации</h3>
+<div class="cards"><a class="card" href="about.html"><h3>О программе</h3><p>Два модуля системы: сервер видеонаблюдения iDLook и удалённые клиенты iDLook Client.</p></a><a class="card" href="requirements.html"><h3>Системные требования</h3><p>Минимальная и рекомендуемая конфигурации ПК, 32 характеристики системы.</p></a><a class="card" href="license.html"><h3>Лицензирование</h3><p>Условно-бесплатная модель: 4 бесплатных подключения, как получить лицензию.</p></a><a class="card" href="network.html"><h3>Настройка камер и сети</h3><p>Монтаж, перенаправление портов 80/554/8000, подготовка IP-камер.</p></a><a class="card" href="install.html"><h3>Установка и запуск ПО</h3><p>Установщик iDLook_Install.exe, первый вход admin/admin.</p></a><a class="card" href="idlook.html"><h3>Программа iDLook</h3><p>Полное руководство сервера: камеры, архив, аналитика, клиенты, настройки и др.</p></a><a class="card" href="client.html"><h3>iDLook Client</h3><p>Руководство удалённого клиента: подключение по GUID, архив, PTZ, настройки.</p></a></div>
+ <div class="footer" id="site-footer"></div><script src="assets/footer.js"></script>
+ </main>
+</div>
+<script>
+document.querySelectorAll('.nav-head').forEach(function(h){
+  h.addEventListener('click',function(){ h.parentElement.classList.toggle('open'); });
+});
+document.addEventListener('click',function(e){
+  if(window.innerWidth<=900 && !e.target.closest('.sidebar') && !e.target.closest('.burger'))
+    document.querySelector('.sidebar').classList.remove('show');
+});
+</script>
+</body>
+</html>

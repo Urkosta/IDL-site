@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>О программе</title>
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <meta name="description" content="О программе iDLook: назначение, возможности и разработчик системы видеонаблюдения.">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div class="topbar">
+ <button class="burger" type="button" onclick="document.querySelector('.sidebar').classList.toggle('show')">☰</button>
+ <b>iDLook</b>&nbsp;<span style="color:#91A9F0">release 1.5</span>
+</div>
+<div class="layout">
+ <aside class="sidebar">
+  <div class="brand"><small class="slogan">One ID. One Look. Full Control</small><div class="row"><div class="logo">iD</div><b>iDLook</b></div></div>
+  <ul class="nav"><li><a href="index.html">Главная</a></li><li><a href="about.html" class="active">О программе</a></li><li><a href="requirements.html">Системные требования</a></li><li><a href="license.html">Лицензирование</a></li><li><a href="network.html">Настройка камер и сети</a></li><li><a href="install.html">Установка и запуск ПО</a></li><li class="nav-group"><button class="nav-head" type="button"><span>Программа iDLook</span><span class="chev">▾</span></button><ul class="sub"><li><a href="idlook.html">Обзор</a></li><li><a href="idlook-mainmenu.html">Главное меню</a></li><li><a href="idlook-contextmenu.html">Всплывающее меню</a></li><li><a href="idlook-archive.html">Архив и фрагменты</a></li><li><a href="idlook-info.html">Информация</a></li><li><a href="idlook-screen.html">Вид экрана</a></li><li><a href="idlook-cameras.html">Камеры</a></li><li><a href="idlook-settings.html">Настройки</a></li><li><a href="idlook-clients.html">Клиенты</a></li><li><a href="idlook-analytics.html">Видеоаналитика</a></li><li><a href="idlook-events.html">События</a></li><li><a href="idlook-ptz.html">Управление PTZ</a></li></ul></li><li class="nav-group"><button class="nav-head" type="button"><span>iDLook Client</span><span class="chev">▾</span></button><ul class="sub"><li><a href="client.html">Обзор</a></li><li><a href="client-mainmenu.html">Главное меню</a></li><li><a href="client-contextmenu.html">Всплывающее меню</a></li><li><a href="client-archive.html">Архив и фрагменты</a></li><li><a href="client-info.html">Информация</a></li><li><a href="client-screen.html">Вид экрана</a></li><li><a href="client-settings.html">Настройки</a></li><li><a href="client-events.html">События</a></li><li><a href="client-ptz.html">Управление PTZ</a></li></ul></li></ul>
+ </aside>
+ <main class="content">
+ <h1>О программе</h1><h3>О программе</h3><div class="panel"><p>Программное обеспечение «iDLook» (в дальнейшем ПО), представляет собой систему, ориентированную на организацию профессионального видеонаблюдения на различных гражданских и промышленных объектах.</p><p>Структурно ПО содержит два модуля:</p><ul><li>модуль системы видеонаблюдения «iDLook»;</li><li>модуль удаленных клиентов «iDLook Client».</li></ul><p>Модуль системы видеонаблюдения «iDLook» обеспечивает основные функции системы видеонаблюдения и позволяет:</p><ul><li>просматривать и сохранять видеопотоки, подключенных камер;</li><li>производить обработку и хранение полученных медиа данных;</li><li>изменять настройки функционирования камер;</li><li>контролировать и управлять архивированием данных;</li><li>обеспечивать взаимодействие с видеорегистраторами или устройствами видеотрансляции;</li><li>управлять поворотными (PTZ) камерами.</li></ul><p>Модуль удаленных клиентов «iDLook Client» обеспечивает доступ удаленных клиентов к ресурсам системы видеонаблюдения и позволяет:</p><ul><li>просматривать видеопотоки, подключенных камер;</li><li>производить локальное хранение (фрагменты) полученных медиа данных;</li><li>обеспечивать доступ к архивным данным системы видеонаблюдения;</li><li>управлять удаленными поворотными (PTZ) камерами.</li></ul></div>
+ <div class="footer" id="site-footer"></div><script src="assets/footer.js"></script>
+ </main>
+</div>
+<script>
+document.querySelectorAll('.nav-head').forEach(function(h){
+  h.addEventListener('click',function(){ h.parentElement.classList.toggle('open'); });
+});
+document.addEventListener('click',function(e){
+  if(window.innerWidth<=900 && !e.target.closest('.sidebar') && !e.target.closest('.burger'))
+    document.querySelector('.sidebar').classList.remove('show');
+});
+</script>
+</body>
+</html>
